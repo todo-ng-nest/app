@@ -1,1 +1,1 @@
-docker build -t app .
+docker build -t -f /home/ec2-user/app/Dockerfile app .
