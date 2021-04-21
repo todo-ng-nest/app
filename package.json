@@ -6,8 +6,7 @@
     "start": "ng serve",
     "docker:dev": "docker build -t app . && docker run -p 4200:4200 -v $(pwd):/home/app app",
     "build": "ng build",
-    "docker:build": "docker build -t app -f Dockerfile.prod .",
-    "docker:push": "docker tag app:abarchibody/todo-app && docker push",
+    "docker:push": "docker build -t app -f Dockerfile.prod . && docker tag app abarchibody/todo-app && docker push abarchibody/todo-app",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
