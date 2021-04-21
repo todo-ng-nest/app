@@ -2,13 +2,13 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable, of } from "rxjs";
 import { catchError, map, tap } from "rxjs/operators";
-
+import { environment } from "../environments/environment";
 @Injectable({
   providedIn: "root"
 })
 export class TodoServerService {
   server: any;
-  serverUrl: string = "http://localhost:3000";
+  serverUrl: string = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
 
