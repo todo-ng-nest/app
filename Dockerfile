@@ -1,12 +1,12 @@
-FROM node:15.14.0-alpine3.10
+FROM node:14.17.0-alpine3.13
 
-RUN addgroup app && adduser -S -G app app
-WORKDIR /home/app
+WORKDIR /workspace
 
-COPY package*.json ./
-RUN npm install
 RUN npm install -g @angular/cli
+COPY package.json ./
+RUN npm install
 COPY . ./
+RUN chmod -Rv 777 src/*
 
 EXPOSE 4200
 
