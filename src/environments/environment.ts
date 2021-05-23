@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: "http://vm1:3000/todo"
+  apiUrl: 'http://192.168.0.8:3000/todo'
 };
 
 /*
