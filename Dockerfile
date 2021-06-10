@@ -22,7 +22,7 @@ RUN npm run build --prod
 ##### Stage 2: Serve app with nginx server
 
 # Use official nginx image as the base image
-FROM nginx:latest
+FROM nginx:alpine
 
 # Copy the nginx config file to replace the default.
 COPY ./nginx.conf  /etc/nginx/conf.d/default.conf
