@@ -40,6 +40,10 @@ EXPOSE 80
 # -t: the target is the name of the image,
 # we will refere it when run it the container
 
+### Tag image
+## docker tag todo.app abarchibody/todo.app
+## docker push abarchibody/todo.app
+
 ### Run container 
 ## docker run -d -p 80:80 --name todo.app todo.app
 # -d: detachable mode
